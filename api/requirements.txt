@@ -3,4 +3,5 @@ fastapi
 uvicorn
 numpy
 catboost
-sklearn
+scikit-learn
+pickle
