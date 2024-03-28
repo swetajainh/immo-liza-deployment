@@ -1,24 +1,20 @@
-# Starts from the python 3.10 official docker image
-FROM python:3.10
+# Use an official Python runtime as a parent image
+FROM python:3.12
 
-# Create a folder "app" at the root of the image
-RUN mkdir /app
-
-# Define /app as the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy all the files in the current directory in /app
+# Copy the current directory contents into the container at /app
 COPY . /app
 
-# Copy requirements.txt to the container
-COPY requirements.txt /app/requirements.txt
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Update pip
-RUN pip install --upgrade pip
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
-# Install dependencies from "requirements.txt"
-RUN pip install -r requirements.txt
+# Define environment variable
+ENV myenv
 
-# Run the app
-# Set host to 0.0.0.0 to make it run on the container's network
-CMD uvicorn app:app --host 0.0.0.0
+# Run app.py when the container launches
+CMD ["python", "app.py"]
