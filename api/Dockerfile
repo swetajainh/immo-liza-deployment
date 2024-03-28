@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Copy all the files in the current directory in /app
 COPY . /app
-
+COPY requirements.txt /app/
 # Update pip
 RUN pip install --upgrade pip
 
