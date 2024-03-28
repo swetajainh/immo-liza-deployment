@@ -4,4 +4,4 @@ uvicorn
 numpy
 catboost
 scikit-learn
-pickle
+
