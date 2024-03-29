@@ -48,3 +48,26 @@ async def predict_house_price(input_data: HouseInput):
 if __name__ == "__main__":
     
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+''' sample test data {
+  "region": "Brussels",
+  "province": "Brussels",
+  "locality": "Brussels",
+  "zip_code": 1000,
+  "latitude": 50.8503,
+  "longitude": 4.3517,
+  "construction_year": 1970,
+  "total_area_sqm": 120,
+  "surface_land_sqm": 150,
+  "nbr_frontages": 3,
+  "nbr_bedrooms": 2,
+  "equipped_kitchen": "SEMI_EQUIPPED",
+  "terrace_sqm": 10,
+  "garden_sqm": 30,
+  "state_building": "Renovated",
+  "primary_energy_consumption_sqm": 180,
+  "epc": "D",
+  "heating_type": "Electric",
+  "cadastral_income": 1200
+}
+'''
