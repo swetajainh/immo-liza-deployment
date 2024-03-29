@@ -37,8 +37,7 @@ To deploy using the trained model -
 
 ![image](https://github.com/swetajainh/immo-liza-deployment/assets/158171729/79e01c0d-a1f2-4903-bd0d-57834108a7f3)
 
-Link - https://property-price-predict-api.onrender.com/docs#/house/predict_house__post
-
+Link - https://immo-liza-deployment-5.onrender.com/docs
 
 ## ⏱️ Timeline
 
